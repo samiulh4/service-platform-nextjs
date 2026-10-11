@@ -25,7 +25,7 @@ export default function ProductDetail({ product }) {
                     <li>/</li>
                     <li><Link href="/e-commerce/products" className="hover:text-blue-600">Products</Link></li>
                     <li>/</li>
-                    <li><Link href={`/e-commerce/products?category=${product.category}`} className="hover:text-blue-600 capitalize">{product.category}</Link></li>
+                    <li><Link href={`/e-commerce/products/category/${product.category}`} className="hover:text-blue-600 capitalize">{product.category}</Link></li>
                     <li>/</li>
                     <li className="text-gray-900 font-medium truncate max-w-[200px]">{product.title}</li>
                 </ol>

@@ -8,7 +8,7 @@ export default async function NavEcommerce() {
     if(!response.ok){
         throw new Error("Failed to fetch categories");
     }
-    const categories = await response.json();
+    const categories = (await response.json()).slice(0, 10);
     return (
         <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
             <div className="max-w-7xl mx-auto lg:px-8 sm:px-4">
@@ -72,7 +72,7 @@ export default async function NavEcommerce() {
                         All Products
                     </Link>
                     {categories.map(category => (
-                        <Link href={category.url} className="text-gray-700 hover:text-blue-600 text-sm font-medium" key={category.slug}>
+                        <Link href={`/e-commerce/products/category/${category.slug}`} className="text-gray-700 hover:text-blue-600 text-sm font-medium" key={category.slug}>
                             {category.name}
                         </Link>
                     ))}

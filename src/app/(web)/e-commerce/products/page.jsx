@@ -39,7 +39,6 @@ export default async function ProductsPage() {
         throw new Error("Failed to fetch products");
     }
     const data = await response.json();
-    console.log(data);
     return (
         <main className="max-w-7xl mx-auto px-4 lg:px-8 py-8">
             <h1 className="text-2xl font-bold text-gray-900 mb-6">Products</h1>

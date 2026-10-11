@@ -38,9 +38,12 @@ export default function ProductCard({ product }) {
             <div className="p-4">
                 {/* Category & Brand */}
                 <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-gray-500 uppercase tracking-wide">
+                    <Link
+                        href={`/e-commerce/products/category/${product.category}`}
+                        className="text-xs text-gray-500 uppercase tracking-wide hover:text-blue-600"
+                    >
                         {product.category}
-                    </span>
+                    </Link>
                     {product.brand && (
                         <span className="text-xs text-blue-600 font-medium">
                             {product.brand}

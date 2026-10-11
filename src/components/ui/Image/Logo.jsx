@@ -6,6 +6,7 @@ export default function Logo({ className="" } = {}) {
                 src="/images/logo.png"
                 alt="Service Platform Logo"
                 fill
+                sizes="(max-width: 768px) 150px, 300px"
                 className="object-contain"
                 priority
             />
